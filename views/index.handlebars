@@ -1,7 +1,7 @@
 <div class="container bg-warning">
   <div class="row">
     <div class="w-100 mt-3">
-      <h1 class="title text-center mb-4">你想對誰說幹話？</h1>
+      <h1 class="title text-center mb-4 font-weight-bold">你想對誰說幹話？</h1>
     </div>
     <form method="POST" action="/">
       <div class="card-group">
@@ -11,8 +11,9 @@
             style="height: 280px; object-fit: cover">
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" name="job" value="engineer" {{#ifEquals selectedJob 'engineer'}}checked{{/ifEquals}}>
-              工程師
+              <input type="radio" style="width: 15px; height: 15px" name="job" value="engineer"
+                {{#ifEquals selectedJob 'engineer'}}checked{{/ifEquals}}>
+              <span class="font-weight-bold" style="font-size: 20px">工程師</span>
             </p>
           </div>
         </div>
@@ -22,8 +23,9 @@
             style="height: 280px; object-fit: cover">
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" name="job" value="designer" {{#ifEquals selectedJob 'designer'}}checked{{/ifEquals}}>
-              設計師
+              <input type="radio" style="width: 15px; height: 15px" name="job" value="designer"
+                {{#ifEquals selectedJob 'designer'}}checked{{/ifEquals}}>
+              <span class="font-weight-bold" style="font-size: 20px">設計師</span>
             </p>
           </div>
         </div>
@@ -33,13 +35,14 @@
             alt=" entrepreneurr" style="height: 280px; object-fit: cover">
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" name="job" value="entrepreneur"
-                {{#ifEquals selectedJob 'entrepreneur'}}checked{{/ifEquals}}> 創業家
+              <input type="radio" style="width: 15px; height: 15px" name="job" value="entrepreneur "
+                {{#ifEquals selectedJob 'entrepreneur'}}checked{{/ifEquals}}> <span class="font-weight-bold"
+                style="font-size: 20px">創業家</span>
             </p>
           </div>
         </div>
         <div class="output col-12 mt-2 pl-0">
-          <button type=" submit" class="btn bg-primary text-white mr-2">產生幹話</button>
+          <button type=" submit" class="btn bg-danger text-white mr-2 font-weight-bold">產生幹話</button>
           <input type="text" style="width: 1000px; height: 38px" placeholder="{{trashTalk}}" readonly>
         </div>
     </form>
