@@ -14,12 +14,19 @@ function trashTalkGenerator(selectedJob) {
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
   //讓task和phrase被隨機選取的index
-  const taskIndex = Math.floor(Math.random() * task[selectedJob].length)
-  const phraseIndex = Math.floor(Math.random() * phrase.length)
 
-  //回傳句子
-  console.log(`身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`)
-  return `身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`
+
+
+  //沒選擇和職業的情況
+  console.log(selectedJob)
+  if (selectedJob === undefined) {
+    return '請先選擇一個職業！'
+  } else {
+    //排除沒選職業的情況
+    const taskIndex = Math.floor(Math.random() * task[selectedJob].length)
+    const phraseIndex = Math.floor(Math.random() * phrase.length)
+    return `身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`
+  }
 
 }
 

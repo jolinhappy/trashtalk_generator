@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const selectedJob = req.body.job
+  console.log(selectedJob)
   trashTalk = trashTalkGenerator(selectedJob)
   res.render('index', { selectedJob: selectedJob, trashTalk: trashTalk })
 })
