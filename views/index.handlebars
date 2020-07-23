@@ -6,38 +6,44 @@
     <form method="POST" action="/">
       <div class="card-group">
         <div class="card mr-4">
-          <img class="card-img-top"
-            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt=" engineer"
-            style="height: 280px; object-fit: cover">
+          <label for="selectA">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              alt=" engineer" style="height: 280px; object-fit: cover">
+          </label>
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" style="width: 15px; height: 15px" name="job" value="engineer"
+              <input type="radio" id="selectA" style="width: 15px; height: 15px" name="job" value="engineer"
                 {{#ifEquals selectedJob 'engineer'}}checked{{/ifEquals}}>
-              <span class="font-weight-bold" style="font-size: 20px">工程師</span>
+              <label for="selectA" class="font-weight-bold" style="font-size: 20px">工程師</lebal>
             </p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top"
-            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt=" designer"
-            style="height: 280px; object-fit: cover">
+          <label for="selectB">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              alt=" designer" style="height: 280px; object-fit: cover">
+          </label>
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" style="width: 15px; height: 15px" name="job" value="designer"
+              <input type="radio" id="selectB" style="width: 15px; height: 15px" name="job" value="designer"
                 {{#ifEquals selectedJob 'designer'}}checked{{/ifEquals}}>
-              <span class="font-weight-bold" style="font-size: 20px">設計師</span>
+              <label for="selectB" class="font-weight-bold" style="font-size: 20px">設計師</lebal>
             </p>
           </div>
         </div>
         <div class="card ml-4">
-          <img class="card-img-top"
-            src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
-            alt=" entrepreneurr" style="height: 280px; object-fit: cover">
+          <label for="selectC">
+            <img class="card-img-top"
+              src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              alt=" entrepreneurr" style="height: 280px; object-fit: cover">
+          </label>
           <div class="card-body p-3 row justify-content-center">
             <p class="card-text">
-              <input type="radio" style="width: 15px; height: 15px" name="job" value="entrepreneur "
-                {{#ifEquals selectedJob 'entrepreneur'}}checked{{/ifEquals}}> <span class="font-weight-bold"
-                style="font-size: 20px">創業家</span>
+              <input type="radio" id="selectC" style="width: 15px; height: 15px" name="job" value="entrepreneur"
+                {{#ifEquals selectedJob 'entrepreneur'}}checked{{/ifEquals}}>
+              <label for="selectC" class="font-weight-bold" style="font-size: 20px">創業家</lebal>
             </p>
           </div>
         </div>
