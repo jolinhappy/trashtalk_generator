@@ -13,7 +13,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  res.render('index')
+  const selectedJob = req.body.job
+  trashTalk = trashTalkGenerator(selectedJob)
+  res.render('index', { selectedJob: selectedJob, trashTalk: trashTalk })
 })
 
 app.listen(port, () => {

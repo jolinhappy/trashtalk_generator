@@ -1,4 +1,5 @@
-function trashTalkGenerator() {
+function trashTalkGenerator(selectedJob) {
+  //基本資料
   const job = {
     engineer: '工程師',
     designer: '設計師',
@@ -10,13 +11,17 @@ function trashTalkGenerator() {
     entrepreneur: ['週末加班', '要能賺錢', '想個 business model', '找 VC 募錢']
 
   }
-
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
+  //讓task和phrase被隨機選取的index
+  const taskIndex = Math.floor(Math.random() * task[selectedJob].length)
+  const phraseIndex = Math.floor(Math.random() * phrase.length)
 
-
+  //回傳句子
+  console.log(`身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`)
+  return `身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`
 
 }
 
 
-trashTalkGenerator()
+module.exports = trashTalkGenerator
