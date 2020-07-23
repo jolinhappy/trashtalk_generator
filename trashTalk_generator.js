@@ -13,10 +13,6 @@ function trashTalkGenerator(selectedJob) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  //讓task和phrase被隨機選取的index
-
-
-
   //沒選擇和職業的情況
   if (selectedJob === undefined) {
     return '請先選擇一個職業！'
