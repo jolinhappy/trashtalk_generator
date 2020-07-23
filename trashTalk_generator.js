@@ -18,7 +18,6 @@ function trashTalkGenerator(selectedJob) {
 
 
   //沒選擇和職業的情況
-  console.log(selectedJob)
   if (selectedJob === undefined) {
     return '請先選擇一個職業！'
   } else {
@@ -27,8 +26,6 @@ function trashTalkGenerator(selectedJob) {
     const phraseIndex = Math.floor(Math.random() * phrase.length)
     return `身為一位${job[selectedJob]}，${task[selectedJob][taskIndex]}，${phrase[phraseIndex]}吧！`
   }
-
 }
-
 
 module.exports = trashTalkGenerator

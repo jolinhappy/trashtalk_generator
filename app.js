@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 const trashTalkGenerator = require('./trashTalk_generator')
+const helper = require('./helper.js')
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -14,7 +15,6 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const selectedJob = req.body.job
-  console.log(selectedJob)
   trashTalk = trashTalkGenerator(selectedJob)
   res.render('index', { selectedJob: selectedJob, trashTalk: trashTalk })
 })
